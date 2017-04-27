@@ -1,0 +1,101 @@
+.select {
+  @include has-margin('tiny', 'bottom');
+  display: inline-block;
+  height: 2.25em;
+  position: relative;
+  vertical-align: top;
+
+  &:after {
+    @include arrow(map-get($colors, 'primary'));
+
+    margin-top: -0.375em;
+    right: 1.125em;
+    top: 50%;
+    z-index: 4;
+  }
+
+  select {
+    @include input;
+    line-height: 1;
+    cursor: pointer;
+    display: block;
+    font-size: 1em;
+    outline: none;
+    padding-right: 2.5em;
+
+    &:hover:not([disabled]) {
+      @include has-border('tiny', 'primary', 'every');
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  // States
+  &:hover {
+    &:after {
+      @include arrow('black');
+    }
+  }
+
+  // Colors
+  @each $name, $color in $colors {
+
+    &.is-#{$name} {
+      &:after {
+        @include arrow($color);
+      }
+    }
+
+    &.is-#{$name} select {
+      @include has-border('tiny', $name, 'every');
+
+      &:hover:not([disabled]) {
+        @include has-border('tiny', 'black', 'every');
+      }
+    }
+  }
+
+  // Sizes
+  &.is-small {
+    @include control-small;
+  }
+
+  &.is-medium {
+    @include control-medium;
+  }
+
+  &.is-large {
+    @include control-large;
+  }
+
+  &.is-disabled {
+    &:after {
+      border-color: rgba(map-get($colors, 'black'), .3);
+    }
+  }
+
+  // Modifiers
+  &.is-fullwidth {
+    width: 100%;
+
+    select {
+      width: 100%;
+    }
+  }
+
+  &.is-loading {
+    color: transparent !important;
+    pointer-events: none;
+
+    &:after {
+      @include loader;
+
+      right: 10px;
+      left: auto;
+      top: 15px;
+      position: absolute !important;
+    }
+  }
+}

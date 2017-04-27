@@ -1,0 +1,11 @@
+.textarea {
+  @include input;
+  @extend .input;
+  
+  display: block;
+  max-height: 600px;
+  max-width: 100%;
+  min-height: 120px;
+  min-width: 100%;
+  resize: vertical;
+}

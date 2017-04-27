@@ -1,0 +1,47 @@
+{
+  "name": "Saiyo",
+  "version": "0.0.1",
+  "homepage": "",
+  "author": "Dave Allen <hello@gyu.nu> (https://gyu.nu)",
+  "description": "A Modern SCSS Utility Framework based on Bulma.io",
+  "main": "saiyo.sass",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gyunu/saiyo.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "utility",
+    "flexbox",
+    "responsive",
+    "framework"
+  ],
+  "bugs": {
+    "url": "https://github.com/gyunu/saiyo/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "captain-git-hook": "~1.0.5",
+    "node-sass": "^3.4.2",
+    "postcss-cli": "^2.5.1",
+    "rimraf": "^2.6.1"
+  },
+  "scripts": {
+    "build": "npm run build:clean && npm run build:sass && npm run build:autoprefix",
+    "build:autoprefix": "postcss --use autoprefixer --output css/saiyo.css css/saiyo.css",
+    "build:clean": "rimraf css",
+    "build:sass": "node-sass --output-style expanded --source-map true saiyo.scss css/saiyo.css",
+    "deploy": "npm run build",
+    "start": "npm run build:sass -- --watch"
+  },
+  "files": [
+    "css",
+    "scss",
+    "saiyo.scss",
+    "LICENSE",
+    "README.md"
+  ]
+}

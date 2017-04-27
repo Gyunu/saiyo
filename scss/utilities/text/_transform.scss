@@ -1,0 +1,12 @@
+.is-title-case {
+  text-transform: capitalize !important;
+}
+
+.is-lower-case {
+  text-transform: lowercase !important;
+}
+
+.is-upper-case,
+.is-caps {
+  text-transform: uppercase !important;
+}

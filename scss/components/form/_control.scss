@@ -1,0 +1,74 @@
+.control {
+  font-size: $size-normal;
+  position: relative;
+  text-align: left;
+
+  // Modifiers
+  &.has-icon {
+    .icon {
+      @include has-colored-text('grey');
+      height: 2.25em;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: 2.25em;
+      z-index: 4;
+    }
+
+    .input {
+      &:focus {
+        & + .icon {
+          @include has-colored-text('grey');
+        }
+      }
+
+      &.is-small {
+        & + .icon {
+          @include has-sized-text('small');
+        }
+      }
+
+      &.is-medium {
+        & + .icon {
+          @include has-sized-text('medium');
+        }
+      }
+
+      &.is-large {
+        & + .icon {
+          @include has-sized-text('large');
+        }
+      }
+    }
+
+    &:not(.has-icon-right) {
+      .icon {
+        left: 0;
+      }
+
+      .input {
+        padding-left: 2.25em;
+      }
+    }
+
+    &.has-icon-right {
+      .icon {
+        right: 0;
+      }
+
+      .input {
+        padding-right: 2.25em;
+      }
+    }
+  }
+
+  &.is-loading {
+    &:after {
+      @include loader;
+
+      position: absolute !important;
+      right: 0.625em;
+      top: 0.625em;
+    }
+  }
+}

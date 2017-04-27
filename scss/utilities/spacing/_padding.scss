@@ -1,0 +1,141 @@
+@each $position, $position-name in $positions {
+  @if(type-of($position-name) == 'string') {
+    $p: positions('padding', $position);
+    @each $size-letter, $size in $sizes {
+
+      @if($size-letter == 'no') {
+        .has-#{$size-letter}-#{$position-name}-padding {
+          #{$p}: #{$size} !important;
+        }
+      }
+      @else {
+        .has-#{$size-letter}-#{$position-name}-padding {
+          #{$p}: #{$size} !important;
+        }
+      }
+
+      @include mobile {
+        .has-#{$size-letter}-#{$position-name}-padding-mobile {
+          #{$p}: #{$size} !important;
+        }
+      }
+
+      @include tablet {
+        .has-#{$size-letter}-#{$position-name}-padding-tablet {
+          #{$p}: #{$size} !important;
+        }
+      }
+
+      @include desktop {
+        .has-#{$size-letter}-#{$position-name}-padding-desktop {
+          #{$p}: #{$size} !important;
+        }
+      }
+
+      @include fullhd {
+        .has-#{$size-letter}-#{$position-name}-padding-fullhd {
+          #{$p}: #{$size} !important;
+        }
+      }
+    }
+  }
+  @if(type-of($position-name) == 'map') {
+
+    @if($position == 'every') {
+      $p1: positions('padding', map-get($position-name, '1'));
+      $p2: positions('padding', map-get($position-name, '2'));
+      $p3: positions('padding', map-get($position-name, '3'));
+      $p4: positions('padding', map-get($position-name, '4'));
+
+      @each $size-letter, $size in $sizes {
+
+        .has-#{$size-letter}-padding {
+          padding: #{$size} !important;
+          #{$p1}: #{$size} !important;
+          #{$p2}: #{$size} !important;
+          #{$p3}: #{$size} !important;
+          #{$p4}: #{$size} !important;
+        }
+
+        @include mobile {
+          .has-#{$size-letter}-padding-mobile {
+            padding: #{$size} !important;
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
+            #{$p3}: #{$size} !important;
+            #{$p4}: #{$size} !important;
+          }
+        }
+
+        @include tablet {
+          .has-#{$size-letter}-padding-tablet {
+            padding: #{$size} !important;
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
+            #{$p3}: #{$size} !important;
+            #{$p4}: #{$size} !important;
+          }
+        }
+
+        @include desktop {
+          .has-#{$size-letter}-padding-desktop {
+            padding: #{$size} !important;
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
+            #{$p3}: #{$size} !important;
+            #{$p4}: #{$size} !important;
+          }
+        }
+
+        @include fullhd {
+          .has-#{$size-letter}-padding-fullhd {
+            padding: #{$size} !important;
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
+            #{$p3}: #{$size} !important;
+            #{$p4}: #{$size} !important;
+          }
+        }
+      }
+    }
+    @else {
+      $p1: positions('padding', map-get($position-name, '1'));
+      $p2: positions('padding', map-get($position-name, '2'));
+
+      @each $size-letter, $size in $sizes {
+        .has-#{$size-letter}-#{$position}-padding {
+          #{$p1}: #{$size} !important;
+          #{$p2}: #{$size} !important;
+        }
+
+        @include mobile {
+          .has-#{$size-letter}-#{$position}-padding-mobile {
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
+          }
+        }
+
+        @include tablet {
+          .has-#{$size-letter}-#{$position}-padding-tablet {
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
+          }
+        }
+
+        @include desktop {
+          .has-#{$size-letter}-#{$position}-padding-desktop {
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
+          }
+        }
+
+        @include fullhd {
+          .has-#{$size-letter}-#{$position}-padding-fullhd {
+            #{$p1}: #{$size} !important;
+            #{$p2}: #{$size} !important;
+          }
+        }
+      }
+    }
+  }
+}

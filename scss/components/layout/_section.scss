@@ -1,0 +1,10 @@
+.section {
+  background-color: map-get($colors, 'white');
+  padding: map-get($sizes, 'large') map-get($sizes, 'large');
+
+  &.is-fullwidth {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+}

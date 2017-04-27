@@ -1,0 +1,23 @@
+.sidebar-layout {
+  display: flex;
+
+  .main {
+    @extend .column;
+    @extend .is-8;
+  }
+
+  .sidebar {
+    @extend .column;
+    @extend .is-4;
+  }
+}
+
+@include mobile {
+  .sidebar-layout {
+    display: block;
+  }
+  .main, .sidebar {
+    display: block;
+    width: 100%;
+  }
+}

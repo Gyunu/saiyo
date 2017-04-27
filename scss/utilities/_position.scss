@@ -1,0 +1,91 @@
+@each $p in $position {
+  .is-#{$p} {
+    position: #{$p} !important;
+
+    @if($p == 'fixed' or 'absolute') {
+      @include mobile {
+        &-mobile {
+        position: #{$p} !important;
+        }
+      }
+
+      @include tablet {
+        &-tablet {
+        position: #{$p} !important;
+        }
+      }
+
+      @include tablet-only {
+        &-tablet-only {
+        position: #{$p} !important;
+        }
+      }
+
+      @include desktop {
+        &-desktop {
+        position: #{$p} !important;
+        }
+      }
+
+      @include desktop-only {
+        &-desktop-only {
+        position: #{$p} !important;
+        }
+      }
+
+      @include widescreen {
+        &-widescreen {
+        position: #{$p} !important;
+        }
+      }
+
+      @include widescreen-only {
+        &-widescreen-only {
+        position: #{$p} !important;
+        }
+      }
+
+      @include fullhd {
+        &-fullhd {
+        position: #{$p} !important;
+        }
+      }
+
+      &.is-top {
+        top: 0 !important;
+
+        &-right {
+          top: 0 !important;
+          right: 0 !important;
+        }
+
+        &-left {
+          top: 0 !important;
+          left: 0 !important;
+        }
+      }
+
+      &.is-left {
+        left: 0 !important;
+      }
+
+      &.is-right {
+        right: 0 !important;
+      }
+
+      &.is-bottom {
+        bottom: 0 !important;
+
+        &-right {
+          bottom: 0 !important;
+          right: 0 !important;
+        }
+
+        &-left {
+          bottom: 0 !important;
+          left: 0 !important;
+        }
+      }
+    }
+  }
+}

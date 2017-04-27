@@ -1,0 +1,16 @@
+@for $layer from 1 through $layers {
+  .is-layer-#{$layer} {
+    position: relative;
+    z-index: $layer;
+  }
+}
+
+.is-layer-topmost {
+  position: relative;
+  z-index: 99999;
+}
+
+.is-layer-bottommost {
+  position: relative;
+  z-index: -99999;
+}

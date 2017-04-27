@@ -1,0 +1,36 @@
+.title,
+.subtitle {
+  word-break: break-word;
+
+  em,
+  span {
+    font-weight: normal;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  .tag {
+    vertical-align: middle;
+  }
+}
+
+.title {
+  color: inherit;
+  font-size: map-get($sizes, 'medium');
+  font-weight: normal;
+  line-height: 1;
+
+  & + .highlight {
+    margin-top: -0.75rem;
+  }
+}
+
+.subtitle {
+  color: inherit;
+  font-size: map-get($sizes, 'small');
+  font-weight: normal;
+  line-height: 1.25;
+  margin-bottom: map-get($sizes, 'medium');
+}

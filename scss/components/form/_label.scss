@@ -1,0 +1,7 @@
+.label {
+  @include has-colored-text('black');
+  margin: 0 0 map-get($sizes, 'tiny');
+  display: block;
+  font-weight: 700;
+
+}

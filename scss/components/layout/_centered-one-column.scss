@@ -1,0 +1,10 @@
+.centered-one-column-layout {
+  max-width: $max-width;
+  margin: 0 auto;
+  display: flex;
+  .main {
+    @extend .column;
+    @extend .is-offset-2-desktop;
+
+  }
+}

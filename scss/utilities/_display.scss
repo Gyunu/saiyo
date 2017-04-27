@@ -1,0 +1,47 @@
+@each $display, $prop in $displays {
+  .is-#{$display} {
+    display: #{$prop} !important;
+
+    &-mobile {
+      @include mobile {
+        display: #{$prop} !important;
+      }
+    }
+
+    &-tablet {
+      @include tablet {
+        display: #{$prop} !important;
+      }
+    }
+
+    &-tablet-only {
+      @include tablet-only {
+        display: #{$prop} !important;
+      }
+    }
+
+    &-touch {
+      @include touch {
+        display: #{$prop} !important;
+      }
+    }
+
+    &-desktop {
+      @include desktop {
+        display: #{$prop} !important;
+      }
+    }
+
+    &-desktop-only {
+      @include desktop-only {
+        display: #{$prop} !important;
+      }
+    }
+
+    &-widescreen {
+      @include widescreen {
+        display: #{$prop} !important;
+      }
+    }
+  }
+}

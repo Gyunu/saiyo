@@ -1,0 +1,7 @@
+@each $name, $shadow in $shadows {
+  @if($shadow != '' and $shadow != null) {
+    .has-#{$name}-shadow {
+      box-shadow: $shadow;
+    }
+  }
+}

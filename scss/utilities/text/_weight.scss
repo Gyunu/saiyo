@@ -1,0 +1,5 @@
+@each $name, $weight in $weights {
+  .is-#{$name}-text {
+    font-weight: $weight;
+  }
+}

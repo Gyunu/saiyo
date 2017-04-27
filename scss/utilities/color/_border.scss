@@ -1,0 +1,54 @@
+@each $size-name, $size in $sizes {
+  @if($size-name == 'no') {
+    @each $position-name, $position in $positions {
+      @if(type-of($position) == 'string') {
+        $b1: positions('border', $position-name);
+        .has-#{$size-name}-#{$position-name}-border {
+          #{$b1}: $size !important;
+        }
+      }
+      @else {
+        @if($position-name == 'every') {
+          .has-#{$size-name}-border {
+            border: #{$size};
+          }
+        }
+        @else {
+          $b1: positions('border', map-get($position, '1'));
+          $b2: positions('border', map-get($position, '2'));
+          .has-#{$size-name}-#{$position-name}-border {
+            #{$b1}: #{$size} !important;
+            #{$b2}: #{$size} !important;
+          }
+        }
+      }
+    }
+  }
+  @else {
+    @each $position-name, $position in $positions {
+      @each $color-name, $color in $colors {
+        @if(type-of($position) == 'string') {
+          $b1: positions('border', $position-name);
+          .has-#{$size-name}-#{$color-name}-#{$position-name}-border {
+            #{$b1}: $size solid #{$color} !important;
+          }
+        }
+        @else {
+          @if($position-name == 'every') {
+            .has-#{$size-name}-#{$color-name}-border {
+              border: $size solid #{$color} !important;
+            }
+          }
+          @else {
+            $b1: positions('border', map-get($position, '1'));
+            $b2: positions('border', map-get($position, '2'));
+            .has-#{$size-name}-#{$color-name}-#{$position-name}-border {
+              #{$b1}: #{$size} solid #{$color} !important;
+              #{$b2}: #{$size} solid #{$color} !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

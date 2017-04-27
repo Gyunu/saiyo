@@ -1,0 +1,11 @@
+.help {
+  @include has-sized-text('xsmall');
+  @include has-margin('tiny', 'top');
+  display: block;
+
+  @each $name, $color in $colors {
+    &.is-#{$name} {
+      color: $color;
+    }
+  }
+}

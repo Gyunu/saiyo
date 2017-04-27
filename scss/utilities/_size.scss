@@ -1,0 +1,11 @@
+.is-fullheight {
+  min-height: 100vh;
+}
+
+.is-fullwidth {
+  min-width: 100%;
+
+  p {
+    max-width: none;
+  }
+}

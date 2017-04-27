@@ -1,0 +1,139 @@
+html {
+  background-color: map-get($colors, 'white');
+  font-size: $baseline-font;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  font-family: map-get($fonts, 'primary');
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: map-get($fonts, 'primary');
+}
+
+code,
+pre {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: map-get($fonts, 'mono');
+}
+
+body {
+  color: $text;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+// Inline
+
+p {
+  max-width: 760px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: map-get($colors, 'primary');
+  cursor: pointer;
+  text-decoration: none;
+  transition: none $speed $easing;
+
+  &:hover {
+    color: darken(map-get($colors, 'primary'), 10);
+  }
+}
+
+code {
+  background-color: map-get($colors, 'white');
+  color: map-get($colors, 'red');
+  font-size: 0.8em;
+  font-weight: normal;
+  padding: map-get($sizes, 'tiny');
+}
+
+hr {
+  background-color: map-get($colors, 'grey');
+  border: none;
+  display: block;
+  height: 1px;
+  margin: map-get($sizes, 'large') 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: baseline;
+}
+
+small {
+  font-size: map-get($sizes, 'xsmall');
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+strong {
+  font-weight: 700;
+}
+
+// Block
+
+pre {
+  font-size: 0.8em;
+  white-space: pre;
+  word-wrap: normal;
+
+  code {
+    @include overflow-touch;
+    background: none;
+    color: inherit;
+    display: block;
+    font-size: map-get($sizes, 'medium');
+    overflow-x: auto;
+    padding: map-get($sizes, 'medium') map-get($sizes, 'medium');
+  }
+}
+
+table {
+  width: 100%;
+
+  td,
+  th {
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    color: $text-strong;
+  }
+}

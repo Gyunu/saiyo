@@ -1,0 +1,28 @@
+.radio {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  line-height: 1.5;
+  position: relative;
+  vertical-align: top;
+
+  input {
+    cursor: pointer;
+    margin-right: 0.5em;
+  }
+
+  & + .radio {
+    margin-left: 0.5em;
+  }
+
+  &:hover {
+    @include has-colored-text('grey');
+  }
+
+  &[disabled] {
+    @include has-colored-text('grey');
+    cursor: not-allowed;
+  }
+}

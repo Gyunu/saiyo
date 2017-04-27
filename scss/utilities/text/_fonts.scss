@@ -1,0 +1,5 @@
+@each $name, $font in $fonts {
+  .has-#{$name}-font {
+    font-family: $font !important;
+  }
+}
