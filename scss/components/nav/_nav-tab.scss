@@ -1,0 +1,21 @@
+.nav__tab {
+  @extend .nav__item;
+
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+
+  &--is-active {
+    border-color: inherit;
+    border-top-color: transparent;
+    color: map-get($colors, 'primary');
+  }
+
+}
+
+a.nav_tab {
+  &:hover {
+    border-color: inherit;
+    border-top-color: transparent;
+    mix-blend-mode: initial;
+  }
+}
