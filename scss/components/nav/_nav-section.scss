@@ -29,4 +29,8 @@
   &--is-collapsed {
     flex-grow: 0 !important;
   }
+
+  &--is-centered {
+    justify-content: center !important;
+  }
 }
