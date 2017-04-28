@@ -28,8 +28,9 @@ a.nav__item {
     background-color: rgba(map-get($colors, 'black'), 0.2);
   }
 
+
   // Modifiers
-  &--active {
+  &--is-active {
     color: inherit;
   }
 }

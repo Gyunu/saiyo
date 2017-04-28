@@ -13,6 +13,7 @@
     margin-left: inherit;
     margin-right: inherit;
     flex-grow: 1;
+
   }
 
   &:nth-of-type(2):not(:last-of-type) {
@@ -25,7 +26,7 @@
     margin-right: inherit;
   }
 
-  &--collapsed {
-    flex-grow: 0;
+  &--is-collapsed {
+    flex-grow: 0 !important;
   }
 }
