@@ -55,7 +55,9 @@ $colors: map-merge($color-interface, $colors);
 $colors: map-merge($color-names, $colors);
 
 
-$shadows-default: ();
+$shadows-default: (
+  'tiny': 0 0 0 1px rgba(10, 10, 10, 0.1)
+);
 
 //0 #{map-get($sizes, $size) / 3} #{map-get($sizes, $size) / 3) + 1} rgba(map-get($colors, 'black'), 0.2), 0 0 0 1px rgba(map-get($colors, 'black'), 0.1)
 
