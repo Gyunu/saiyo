@@ -1,0 +1,23 @@
+.card__header {
+  border-bottom: map-get($sizes, 'tiny') solid map-get($colors, 'grey');
+  align-items: stretch;
+  display: flex;
+}
+
+.card__header-title {
+  @include has-colored-text('black');
+  @include has-padding('xsmall', 'every');
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  font-weight: 700;
+}
+
+.card__header-icon {
+  @include has-padding('xsmall', 'every');
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  color: currentColor;
+}

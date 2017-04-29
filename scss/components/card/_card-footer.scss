@@ -1,0 +1,20 @@
+.card__footer {
+  @include has-border('tiny', 'grey', 'top');
+  align-items: stretch;
+  display: flex;
+}
+
+.card__footer-item {
+  @include has-padding('xsmall', 'every');
+  align-items: center;
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: center;
+  background-color: inherit;
+
+  &:not(:last-child) {
+    @include has-border('tiny', 'grey', 'right');
+  }
+}
