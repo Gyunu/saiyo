@@ -1,0 +1,8 @@
+.card {
+  @include has-colored-bg('white');
+  @include has-colored-text('black');
+  @include has-shadow('tiny');
+  @include has-rounded-corners('tiny');
+  max-width: 100%;
+  position: relative;
+}

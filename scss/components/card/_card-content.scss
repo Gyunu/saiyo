@@ -1,0 +1,11 @@
+.card__image {
+  display: block;
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__content {
+  @include has-padding('small', 'every');
+  @include has-padding('medium', 'top');
+}
