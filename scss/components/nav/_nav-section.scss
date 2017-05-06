@@ -26,11 +26,11 @@
     margin-right: inherit;
   }
 
-  &--is-collapsed {
+  &.is-collapsed {
     flex-grow: 0 !important;
   }
 
-  &--is-centered {
+  &.is-centered {
     justify-content: center !important;
   }
 }

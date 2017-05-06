@@ -1,7 +1,7 @@
 .box {
   @include has-colored-bg('white');
   @include has-padding('medium', 'every');
-  @include has-rounded-corners('xsmall');
+  @include has-rounded-corners('tiny');
   @include has-shadow('tiny');
   @include has-margin('medium', 'vert');
 }
