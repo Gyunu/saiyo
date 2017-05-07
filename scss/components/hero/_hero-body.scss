@@ -1,0 +1,21 @@
+.hero__body {
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  @include has-padding('large', 'vert');
+  @include has-padding('small', 'horz');
+
+  &.is-centered {
+    align-items: center;
+  }
+
+  &.is-right {
+    align-items: flex-end;
+  }
+
+  @include from(map-get($media, 'widescreen')) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

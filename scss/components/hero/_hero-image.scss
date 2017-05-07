@@ -1,0 +1,12 @@
+.hero__image {
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+  &.is-transparent {
+    opacity: 0.7;
+  }
+}
