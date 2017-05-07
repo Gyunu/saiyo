@@ -1,0 +1,6 @@
+.media__left {
+  @include has-margin('medium', 'right');
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
