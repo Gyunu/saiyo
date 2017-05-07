@@ -1,0 +1,27 @@
+.level {
+  @include block;
+  @include has-padding('small', 'vert');
+  align-items: center;
+  justify-content: space-between;
+
+  code {
+    border-radius: $radius;
+  }
+
+  img {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &.is-mobile {
+    display: flex;
+
+    .level__section {
+      display: flex;
+    }
+  }
+
+  @include tablet {
+    display: flex;
+  }
+}
