@@ -1,5 +1,4 @@
 .level__section {
-  @include has-padding('small', 'horz');
   @include has-padding('xsmall', 'vert');
   display: flex;
   flex-basis: auto;
