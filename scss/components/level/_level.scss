@@ -1,6 +1,5 @@
 .level {
   @include block;
-  @include has-padding('small', 'vert');
   align-items: center;
   justify-content: space-between;
 
