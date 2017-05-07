@@ -1,0 +1,20 @@
+.level__item {
+  // align-items: center;
+  // display: flex;
+  // flex-basis: auto;
+  // flex-grow: 0;
+  // flex-shrink: 0;
+  // justify-content: center;
+
+  .title,
+  .subtitle {
+    margin-bottom: 0;
+  }
+
+  // Responsiveness
+  @include mobile {
+    &:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+  }
+}
