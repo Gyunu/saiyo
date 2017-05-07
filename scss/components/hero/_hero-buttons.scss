@@ -1,0 +1,24 @@
+.hero__buttons {
+  margin-top: 1.5rem;
+
+  // Responsiveness
+  @include mobile {
+    .button {
+      display: flex;
+
+      &:not(:last-child) {
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+
+    .button:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.hero {
+  align-items: stretch;
+  background-color: map-get($colors, 'white');
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 0;
+
+  .nav {
+    background: none;
+  }
+
+  &.is-large {
+    @include tablet {
+      .hero__body {
+        padding-bottom: map-get($sizes, 'xlarge');
+        padding-top: map-get($sizes, 'xlarge');
+      }
+    }
+  }
+
+  &.is-fullheight {
+    .hero__body {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+
+      & > .container {
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+    }
+  }
+}
