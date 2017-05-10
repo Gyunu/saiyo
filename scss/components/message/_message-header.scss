@@ -1,0 +1,23 @@
+.message__header {
+  @include has-padding('tiny', 'vert');
+  @include has-padding('small', 'horz');
+  align-items: center;
+  background-color: inherit;
+  border-radius: map-get($sizes, 'xsmall') map-get($sizes, 'xsmall') 0 0;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: none;
+
+  a,
+  strong {
+    color: inherit;
+  }
+
+  & + .message__body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+  }
+}

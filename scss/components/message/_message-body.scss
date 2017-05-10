@@ -1,0 +1,19 @@
+.message__body {
+  @include has-padding('small', 'every');
+  @include has-rounded-corners('xsmall');
+  max-width: none;
+
+
+  a {
+    text-decoration: underline;
+  }
+
+  code,
+  pre {
+    @include has-colored-bg('white');
+  }
+
+  pre code {
+    background: transparent;
+  }
+}

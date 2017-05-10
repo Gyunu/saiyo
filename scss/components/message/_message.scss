@@ -1,0 +1,26 @@
+.message {
+  @include has-rounded-corners('xsmall');
+  margin: map-get($sizes, 'xlarge') 0;
+
+  // Colors
+  @each $name, $color in $colors {
+    $color-lightning: max(100% - lightness($color) - 2%, 0%);
+    $color-luminance: colorLuminance($color);
+    $darken-percentage: $color-luminance * 70%;
+    $desaturate-percentage: $color-luminance * 30%;
+
+    &.is-#{$name} {
+      background-color: lighten($color, $color-lightning);
+
+      .message__header {
+        background-color: $color;
+        color: findColorInvert($color);
+      }
+
+      .message__body {
+        border-color: $color;
+        color: desaturate(darken($color, $darken-percentage), $desaturate-percentage);
+      }
+    }
+  }
+}
