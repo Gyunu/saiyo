@@ -1,0 +1,12 @@
+.menu__label {
+  @include has-sized-text('xsmall');
+  color: inherit;
+
+  &:not(:first-child) {
+    @include has-margin('small', 'top');
+  }
+
+  &:not(:last-child) {
+    @include has-margin('small', 'bottom');
+  }
+}

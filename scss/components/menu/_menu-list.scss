@@ -1,0 +1,29 @@
+.menu__list {
+  line-height: 1.25;
+
+  a {
+    @include has-padding('xsmall', 'horz');
+    @include has-padding('xsmall', 'vert');
+    color: inherit;
+    display: block;
+
+    &:hover {
+      @include has-colored-bg('black', 0.2);
+      mix-blend-mode: luminosity;
+      color: map-get($colors, 'white');
+    }
+
+    // Modifiers
+    &.is-active {
+      @include has-colored-bg('primary');
+    }
+  }
+
+  li {
+    ul {
+      @include has-border('tiny', 'grey', 'left');
+      @include has-margin('xsmall', 'every');
+      @include has-padding('xsmall', 'left');
+    }
+  }
+}
