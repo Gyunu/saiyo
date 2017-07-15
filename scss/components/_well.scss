@@ -1,0 +1,14 @@
+.well {
+  @include has-padding('large', 'every');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+ @each $name, $color in $colors {
+   &.is-#{$name} {
+    @include has-colored-bg($name);
+   }
+ }
+}
