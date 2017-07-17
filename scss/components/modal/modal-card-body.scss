@@ -1,0 +1,9 @@
+.modal__card-body {
+  @include overflow-touch;
+
+  background-color: $white;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: auto;
+  padding: 20px;
+}

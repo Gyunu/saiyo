@@ -1,0 +1,4 @@
+.modal__background {
+  @include overlay;
+  background-color: rgba($black, 0.86);
+}
