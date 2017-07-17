@@ -1,0 +1,14 @@
+.panel__heading {
+  @include has-colored-bg('primary');
+  @include has-colored-text('white');
+  @include has-sized-text('small');
+  @include has-rounded-corners('small');
+  border-radius: $radius $radius 0 0;
+  font-weight: $weight-light;
+  line-height: 1.25;
+  padding: 0.5em 0.75em;
+
+  &:first-child {
+    border-top: 1px solid $border;
+  }
+}
