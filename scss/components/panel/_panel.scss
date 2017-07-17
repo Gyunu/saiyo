@@ -1,0 +1,8 @@
+.panel {
+  max-width: 600px;
+  font-size: $size-normal;
+
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}

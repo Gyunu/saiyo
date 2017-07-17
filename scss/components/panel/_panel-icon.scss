@@ -1,0 +1,9 @@
+.panel__icon {
+  @include has-margin('xsmall', 'right');
+  @include fa(14px, 1em);
+
+  .fa {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
