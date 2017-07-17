@@ -4,7 +4,7 @@
   border-bottom: 2px solid transparent;
   border-top: 2px solid transparent;
 
-  &--is-active {
+  &.is-active {
     border-color: inherit;
     border-top-color: transparent;
     color: map-get($colors, 'primary');
